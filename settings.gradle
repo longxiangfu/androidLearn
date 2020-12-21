@@ -1,3 +1,4 @@
+include ':uirecycler'
 include ':uilistvieiwtest:uirecycler'
 include ':uilistvieiwtest'
 include ':uitest'

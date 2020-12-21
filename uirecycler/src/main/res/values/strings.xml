@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">uiListVieiwTest</string>
+    <string name="news_1">这个帅哥吗？</string>
+    <string name="news_2">小瓜的吃法正确吗？</string>
+    <string name="news_3">我的这部手机怎么样？</string>
+    <string name="news_4">台湾到底想走向何方？</string>
+    <string name="news_5">看我的华为手机！</string>
+    <string name="news_6">咱们一起吃棒棒糖吧！</string>
+    <string name="news_7">我是祖国的骄傲！</string>
+    <string name="news_8">颜值吊打一切的超级手机！</string>
+    <string name="news_9">好像回到童年时代！</string>
+    <string name="news_10">冬天的景色真的很美！</string>
+</resources>

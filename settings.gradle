@@ -1,0 +1,6 @@
+include ':uilistvieiwtest:uirecycler'
+include ':uilistvieiwtest'
+include ':uitest'
+include ':activitylifecycletest'
+include ':app'
+rootProject.name = "HelloWorld"

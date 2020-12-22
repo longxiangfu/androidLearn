@@ -3,6 +3,7 @@ package com.example.uirecycler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -24,6 +25,29 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerViewHolder> {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.hotnew_item, parent, false);
         //构造RecyclerViewHolder
         RecyclerViewHolder recyclerViewHolder = new RecyclerViewHolder(view);
+
+        //click右侧大图
+        recyclerViewHolder.iv_img.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //获取当前click的单项位置
+                int position = recyclerViewHolder.getAdapterPosition();
+                HotNews hotNews = hotNewsList.get(position);
+                Toast.makeText(v.getContext(), hotNews.getNews_id(), Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        //click热度图片
+        recyclerViewHolder.iv_hot.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                int position = recyclerViewHolder.getAdapterPosition();
+                HotNews hotNews = hotNewsList.get(position);
+                hotNews.setHot(hotNews.getHot() + 1);//点击一次，数值+1
+                notifyDataSetChanged();//发出通知，让UI更新
+            }
+        });
+
         return recyclerViewHolder;
     }
 

@@ -3,6 +3,7 @@ package com.example.uirecycler;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
 import android.os.Bundle;
 
@@ -23,6 +24,13 @@ public class RecyclerActivity extends AppCompatActivity {
         //设置布局管理器
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(linearLayoutManager);
+//        linearLayoutManager.setOrientation(LinearLayoutManager.HORIZONTAL);//设置布局的方向为水平方向，默认是垂直方向
+//        //设置瀑布流布局管理器
+//        StaggeredGridLayoutManager staggeredGridLayoutManager = new StaggeredGridLayoutManager(
+//                3,//一行3列
+//                StaggeredGridLayoutManager.VERTICAL//方向垂直
+//        );
+//        recyclerView.setLayoutManager(staggeredGridLayoutManager);
         //设置适配器
         initHotNewsList();//初始化数据
         RecyclerAdapter recyclerAdapter = new RecyclerAdapter(hotNewsList);

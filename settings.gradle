@@ -1,3 +1,4 @@
+include ':fragmenttest'
 include ':uirecycler'
 include ':uilistvieiwtest:uirecycler'
 include ':uilistvieiwtest'

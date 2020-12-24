@@ -1,3 +1,5 @@
+include ':sqlitetest'
+include ':sharedpreferencestest'
 include ':fragmenttest'
 include ':uirecycler'
 include ':uilistvieiwtest:uirecycler'

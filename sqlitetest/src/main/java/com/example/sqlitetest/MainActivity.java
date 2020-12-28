@@ -9,6 +9,8 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 
+import com.google.gson.Gson;
+
 public class MainActivity extends AppCompatActivity {
 
     MyDbHelper myDbHelper;
@@ -97,8 +99,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 SQLiteDatabase db = myDbHelper.getWritableDatabase();
-                //查询，返回游标。可以添加查询条件
-                Cursor cursor = db.query("Book", null, null, null, null, null, null);
+                //查询，返回游标。可以添加查询条件。注意：分页的话，需要载添加一个limit参数,如下从第6页开始，返回9条数据
+//                Cursor cursor = db.query("Book", null, null, null, null, null, null, "5,9");
+                Cursor cursor = db.query("Book", null, null, null, null, null, null, "5,9");
                 if (cursor.moveToFirst()) {//游标移动到第一行，并且判断是否有数据
                     do{
                         String name = cursor.getString(cursor.getColumnIndex("name"));

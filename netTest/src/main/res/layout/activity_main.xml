@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+<!--    <WebView-->
+<!--        android:id="@+id/wv"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintLeft_toLeftOf="parent"-->
+<!--        app:layout_constraintRight_toRightOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+    <!--  http get json -->
+    <Button
+        android:id="@+id/btn_http"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="请求http"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_weight="3"
+        android:layout_height="0dp">
+        <TextView
+            android:id="@+id/tv_http"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+    </ScrollView>
+
+    <!--  http get图片  -->
+    <Button
+        android:id="@+id/btn_img"
+        android:layout_width="wrap_content"
+        android:layout_weight="1"
+        android:layout_height="0dp"
+        android:text="请求图片"
+        />
+    <ImageView
+        android:id="@+id/iv_img"
+        android:layout_width="wrap_content"
+        android:layout_weight="3"
+        android:layout_height="0dp"/>
+
+    <!--  http post  -->
+    <Button
+        android:id="@+id/btn_post"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="post数据"/>
+
+</LinearLayout>

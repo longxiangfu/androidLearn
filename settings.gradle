@@ -1,3 +1,4 @@
+include ':netTest'
 include ':sqlitetest'
 include ':sharedpreferencestest'
 include ':fragmenttest'
